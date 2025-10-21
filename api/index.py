@@ -9,3 +9,7 @@ def home():
 @app.route('/about')
 def about():
     return 'About'
+
+@app.route('/Danna')
+def about():
+    return 'Ti amu'
