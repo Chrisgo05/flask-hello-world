@@ -10,6 +10,6 @@ def home():
 def about():
     return 'About'
 
-@app.route('/Danna')
+@app.route('/danna')
 def Danna():
     return 'Ti amu'
