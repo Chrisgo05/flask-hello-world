@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request, jsonify, render_ttemplate
 import psycopg2
 from dotenv import load_dotenv
 import os
@@ -13,6 +13,7 @@ app = Flask(__name__)
 def get_connection():
         connection = psycopg2.connect(CONNECTION_STRING)
         print("Connection successful!")
+        return connection
     
 
 @app.route('/')
