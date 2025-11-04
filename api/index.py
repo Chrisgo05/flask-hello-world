@@ -33,7 +33,7 @@ def sensor():
     
         # Close the cursor and connection
         cursor.close()
-        connection.close()
+        conn.close()
         print("Connection closed.")
         return f"current time:{result}"
     
