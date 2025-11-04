@@ -25,7 +25,7 @@ def sensor():
         cursor = connection.cursor()
         
         # Example query
-        cursor.execute("select now();")
+        cursor.execute("select * from sensores;")
         result = cursor.fetchone()
         print("Current Time:", result)
     
