@@ -13,6 +13,8 @@ app = Flask(__name__)
 def get_connection():
         connection = psycopg2.connect(CONNECTION_STRING)
         print("Connection successful!")
+        # Create a cursor to execute SQL queries
+        cursor = connection.cursor()
     
 
 @app.route('/')
@@ -24,8 +26,6 @@ def sensor():
     # Connect to the database
     try:
         get_connection()
-        # Create a cursor to execute SQL queries
-        cursor = connection.cursor()
         
         # Example query
         cursor.execute("select * from sensores;")
