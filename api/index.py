@@ -31,7 +31,7 @@ def sensor():
         cursor.execute("select * from sensores;")
         result = cursor.fetchall()
         for i in result:
-                print("Current Time:", result)
+                print("Current Time:", i)
     
         # Close the cursor and connection
         cursor.close()
