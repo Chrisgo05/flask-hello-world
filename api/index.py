@@ -32,7 +32,6 @@ def sensor():
         result = cursor.fetchall()
         for i in result:
                 print(f"Current Time:{i}")
-                print()
     
         # Close the cursor and connection
         cursor.close()
@@ -72,3 +71,7 @@ def insert_sensor_value(sensores_id):
     finally:
         if 'conn' in locals():
             conn.close()
+
+@app.route('/pagina')
+def pagina():
+        return render_template("pagina.html")
