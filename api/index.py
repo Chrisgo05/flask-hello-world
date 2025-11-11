@@ -42,7 +42,7 @@ def sensor():
     except Exception as e:
         return f"Failed to connect: {e}"
 
-@app.route("/sensor/<int:sensor_id>")
+@app.route("/sensor/<int:sensores_id>")
 def get_sensor(sensor_id):
     try:
         conn = get_connection()
