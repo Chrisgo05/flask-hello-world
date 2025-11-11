@@ -29,8 +29,9 @@ def sensor():
         cursor = conn.cursor()
         # Example query
         cursor.execute("select * from sensores;")
-        result = cursor.fetchone()
-        print("Current Time:", result)
+        result = cursor.fetchall()
+        for i in result:
+                print("Current Time:", result)
     
         # Close the cursor and connection
         cursor.close()
