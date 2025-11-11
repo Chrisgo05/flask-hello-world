@@ -52,7 +52,7 @@ def get_sensor(sensor_id):
         cur.execute("""
             SELECT value, created_at
             FROM sensores
-            WHERE sensor_id = %s
+            WHERE sensores_id = %s
             ORDER BY created_at DESC
             LIMIT 10;
         """, (sensor_id,))
