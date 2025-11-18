@@ -73,4 +73,4 @@ def get_sensor(sensores_id):
                 
 @app.route('/pagina')
 def pagina():
-        return render_template("pagina.html")
+    return render_template("pagina.html")
